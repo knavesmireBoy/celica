@@ -1,0 +1,157 @@
+/* https://stackoverflow.com/questions/6917639/css-media-query-not-working-in-ie-9 */
+/*http://browserhacks.com/*/
+/*netrenderer: 9: 997; 10: 1016; 11: 850*/
+/*https://stackoverflow.com/questions/41847420/media-queries-deprecated
+http://cssmediaqueries.com/overview.html*/
+
+/* NET RENDERER HAS ISSUES WITH BG IMAGES AND LIKES THIS LAST... */
+@media only screen {
+
+    header {
+		padding-top: 22%;
+	}
+    .inlinesvg header[style] {
+    }
+    
+    h2 {
+        font: 3.2em Arial, sans-serif;
+    }
+    /*
+        nav a:hover, nav a:active {
+		-webkit-transform: scale(1.01);
+		-ms-transform: scale(1.01);
+		transform: scale(1.01);
+		transform-origin: left;
+	}
+    */
+    /* ... including this: */
+    nav a, nav a:link, nav a:visited {
+	background-repeat: no-repeat;
+	background-position: 0 -5%;
+	color: #080;
+}
+     nav a:hover {
+		background-position: 0% 47%;
+	}
+		
+	#innerwrap nav {
+		font: 700 1em/2.3 Verdana, sans-serif;
+	}
+	/*background size gives false positives in some browsers, using inlinesvg where support is slightly more recent*/
+	.inlinesvg #wrap footer {
+		background-size: 105%;
+	}
+	.inlinesvg #wrap footer ul {
+		background-size: 150%;
+	}
+    @supports (background-size: cover) {
+       #wrap footer {
+		background-size: 105%;
+	}
+	#wrap footer ul {
+		background-size: 150%;
+	} 
+    }
+    #innerwrap main p {
+		text-shadow: 1px 1px 2px white;
+	}
+ 
+}
+
+@media only screen and (max-width: 768px) {
+	
+	main hr {
+		display: none;
+	}
+	header h2 {
+		text-indent: 0px;
+		padding-bottom: .1em;
+	}
+        h2 {
+        font-size: -webkit-calc(28px + (42 - 28) * (100vw - 320px) / (768 - 320));
+
+    }
+	nav a, nav a:link, nav a:visited {
+		background-image: none;
+		padding: 0em .8em;
+	}
+	nav ul, nav:active ul {
+		border: solid #C6C084 1px;
+		background: #FBFCFC;
+		background: linear-gradient(90deg, #FBFCFC, white);
+		border-width: 0px 0px 1px 0px;
+		-webkit-box-shadow: 3px 3px 6px hsla(300, 10%, 20%, .75);
+		box-shadow: 3px 3px 6px hsla(300, 10%, 20%, .75);
+		line-height: 2.7;
+		z-index: 2;
+	}
+	.menu {
+		-webkit-box-shadow: inset 0px 0px 5px hsla(300, 10%, 20%, .75), 2px 2px 2px hsla(300, 10%, 20%, .75);
+		box-shadow: inset 0px 0px 5px hsla(300, 10%, 20%, .75), 2px 2px 2px hsla(300, 10%, 20%, .75);
+		background: url(../assets/menu-icon.png) center no-repeat #C6C084;
+		background-size: 105%;
+	}
+	.menu:hover {
+		-webkit-transform: scale(90%);
+		-ms-transform: scale(90%);
+		transform: scale(90%);
+	}
+	nav li:last-child {
+		border-width: 0;
+	}
+	nav a:hover {
+		background-color: #eeeedd;
+		background-color: rgb(238, 238, 221);
+		text-shadow: 1px 1px 1px white;
+	}
+	/* https://codepen.io/Idered/pen/AeBgF*/
+	/* main required to override main { position: relative; }*/
+	main .read-more-state~.read-more-trigger {
+		font: .8em/2.5 'Droid Sans', sans-serif;
+		border: 1px solid #ddd;
+		border-radius: .25em;
+	}
+	main .read-more-state~.read-more-trigger::before {
+		content: 'Read On';
+		color: #900;
+		color: rgb(153, 0, 0);
+	}
+	main .read-more-state:checked~.read-more-trigger::before {
+		content: 'Read It';
+	}
+	main .read-more-trigger:hover, main .read-more-state:checked~.read-more-trigger::before {
+		color: #080;
+		color: rgb(0, 136, 0);
+	}
+	main .read-more-state~.read-more-target p {
+		position: absolute;
+		opacity: 0;
+	}
+	main .read-more-state:checked~.read-more-target p, .ellipsis.touchevents main .read-more-target p.show, .ellipsis.touchevents main .read-more-state~.read-more-target p.elip {
+		position: relative;
+		opacity: 1;
+	}
+	.ellipsis.touchevents main .read-more-state~.read-more-target p {
+		-webkit-transition: opacity 2s;
+		-o-transition: opacity 2s;
+		transition: opacity 2s;
+	}
+	.ellipsis.touchevents main .read-more-state~.read-more-target p.elip {
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+	}
+	.ellipsis.touchevents main .read-more-state~.read-more-target p.show {
+		white-space: normal;
+		text-overflow: inherit;
+	}
+    /*https://css-tricks.com/override-inline-styles-with-css/*/
+    #wrap header, #wrap header[style] {
+		background-image: none !important;
+	}
+}
+@media only screen and (min-width: 769px) {
+	main p, main hr {
+		animation: fade 3s ease-in;
+	}
+}

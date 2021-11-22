@@ -1,0 +1,234 @@
+/* https://responsivedesign.is/develop/browser-feature-support/media-queries-for-common-device-breakpoints/ */
+
+/*https://css-tricks.com/logic-in-media-queries/*/
+
+/*https://responsivedesign.is/develop/browser-feature-support/media-queries-for-common-device-breakpoints/*/
+
+/*https://stackoverflow.com/questions/25759046/iphone-6-and-6-plus-media-queries*/
+
+/*
+-moz-device-pixel-ratio
+Gives the number of device pixels per CSS pixel.
+Note: This media feature is also implemented by Webkit as -webkit-device-pixel-ratio. The min and max prefixes as implemented by Gecko are named min--moz-device-pixel-ratio and max--moz-device-pixel-ratio; but the same prefixes as implemented by Webkit are named -webkit-min-device-pixel-ratio and -webkit-max-device-pixel-ratio.
+*/
+
+@media only screen {
+	figcaption {
+		font: normal 1.4em/1 "Handwritten", Georgia, Palatino, serif;
+	}
+	.inlinesvg #controls button {
+		background-image: url(../assets/buttons_sprite.png);
+		background-color: hsla(75, 50%, 40%, .3);
+		background-size: 128%;
+	}
+    @supports (background-size: cover) {
+        #controls button {
+		background-image: url(../assets/buttons_sprite.png);
+		background-color: hsla(75, 50%, 40%, .3);
+		background-size: 128%;
+        }
+    }
+	button#exit {
+		color: hsla(75, 50%, 40%, .5);
+		padding: .2em .25em;
+		border-radius: 2em;
+		border: 0px solid #FFF;
+		font-size: 2em;
+		text-shadow: 1px 1px 1px hsla(75, 50%, 30%, 1);
+		background: none;
+		width: auto;
+		height: auto;
+		display: inline;
+	}
+	ul#thumbnails li a {
+		float: none;
+		/*?*/
+	}
+	button#exit:hover, button#exit:focus {
+		background-color: hsla(75, 50%, 40%, .5);
+		color: #FFF;
+		-webkit-transform: rotate(360deg);
+		transform: rotate(360deg);
+	}
+	ul#thumbnails.gallery {
+		padding: .67%;
+	}
+	ul#thumbnails.gallery li {
+		width: 17.31%;
+	}
+	ul#thumbnails.gallery li, ul#thumbnails.gallery li a {
+		-webkit-box-sizing: border-box;
+		box-sizing: border-box;
+	}
+	ul#thumbnails.gallery li.portrait {
+		width: 13.2%;
+	}
+	.no-textshadow button#exit {
+		color: hsla(75, 50%, 40%, 1);
+	}
+}
+
+@media only screen and (max-width: 1100px) {
+
+    .five figcaption {
+        border-width: .5em .7em 1em;
+}
+}
+@media only screen and (max-width: 900px) {
+	#links main aside {
+		right: -30%;
+	}
+    .four figcaption {
+        border-width: .5em .7em 1em;
+}
+}
+@media only screen and (max-width: 768px) {
+	#sell a {
+		margin-left: 0%;
+	}
+	#alpacas_for_sale footer {
+		padding-top: 15%;
+		margin-top: -15%;
+	}
+	#alpacas_for_sale main>aside {
+		position: relative;
+		width: 100%;
+		right: 0%;
+	}
+	#alpacas_for_sale.sell footer {
+		padding-top: 0;
+		margin-top: 9%;
+	}
+	#gallery.showtime header h2 {
+		margin: 0%;
+	}
+    
+    .js #alpacas_for_sale aside img {
+		margin: 0%;
+		float: none;
+		animation: enter 1s 1 ease-out;
+	}
+	
+	#alpacas_for_sale.sell main>aside {
+		position: absolute;
+	}
+	article.intro div#sell figure a {
+		margin-left: 0%;
+	}
+    #sell.tog a.show {
+		margin: 0;
+		display: block;
+	}
+    
+    .extent figcaption {
+        border-width: .5em .7em 1em;
+}
+    
+    .extent figure:nth-of-type(2) figcaption{
+        border-width: .5em 0 1em;
+    }
+
+
+}
+
+@media only screen and (max-width: 667px) {
+	ul.loop li a {
+		font-size: 1em;
+		padding: 1em .5em 1em 2em;
+	}
+	/* if not using flex */
+	#sell table {
+		float: none;
+		width: 100%;
+		margin: 0;
+	}
+	.sell #sell {
+		text-align: center;
+	}
+	.touchevents .inplay #controls {
+		top: 2.1em;
+	}
+	#sell a.show, #sell.tog table.show {
+		position: absolute;
+		left: -9999px;
+	}
+	#sell table.show, #sell.tog a.show, #sell.extent a.show {
+		position: static;
+		left: 0;
+	}
+	/*https://stackoverflow.com/questions/21715927/table-row-not-expanding-to-full-width/36606652*/
+	.sell #sell a.show, .sell #sell.tog table.show {
+		/*display: none;*/
+		position: absolute;
+		left: -9999px;
+	}
+	.sell #sell.tog a.show, .sell #sell table.show {
+		/*display: block;*/
+		position: static;
+		left: 0;
+	}
+    
+       .extent figcaption {
+        border-width: .5em 0 1em;
+}
+    #stud_services #wrap footer {
+		padding-top: 0%;
+		margin-top: 9%;
+	}
+}
+@media only screen and (max-width: 667px) and (orientation: portrait) {
+	#controls {
+		font-size: 1.5em;
+	}
+	.touchevents .inplay #controls {
+		top: 2.2em;
+	}
+}
+@media only screen and (max-width: 375px) and (orientation: portrait) {
+	#list, #sell {
+		font-size: 0.9em;
+	}
+	#list.tab, #list.tab+#sell {
+		font-size: 0.95em;
+	}
+}
+@media only screen and (max-width: 320px) and (orientation: portrait) {
+	html body {
+		font-size: .66em;
+	}
+    h2 {
+        font-size: 2.7em;
+    }
+	figure a {
+		box-shadow: none;
+	}
+    
+    
+    ul#thumbnails.gallery {
+		width: 98%;
+	}
+     ul#thumbnails.gallery li {
+		width: 17.2%;
+	}
+	
+    ul#thumbnails.gallery li.portrait {
+		width: 14.7%;
+	}
+	ul#thumbnails {
+		padding: 1%;
+	}
+	#controls.static {
+		top: -2.7em;
+	}
+	#alpacas_for_sale #tooltip {
+		bottom: 23em;
+	}
+    .no-objectfit #exit{
+    left: 90%;
+}
+}
+@media only screen and (min-width: 1100px) {
+.six figure:nth-of-type(5) figcaption{
+    border-width: .5em .2em 1em;
+}
+}

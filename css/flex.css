@@ -1,0 +1,401 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 20 version
+ https://www.smashingmagazine.com/2019/02/css-browser-support/ 
+https://github.com/philipwalton/solved-by-flexbox/blob/master/assets/css/components/site.css 
+https://github.com/philipwalton/flexbugs
+*/
+
+/*
+.js #alpacas_for_sale {
+	background-color: ivory;
+}
+
+
+.flexboxlegacy #alpacas_for_sale {
+	background-color: cornsilk;
+}
+
+.flexboxtweener #alpacas_for_sale {
+	background-color: papayawhip;
+}
+
+.flexbox #alpacas_for_sale {
+	background-color: peachpuff;
+}
+
+.flexwrap #alpacas_for_sale {
+	background-color: orange;
+}
+
+.cssgrid body#alpacas_for_sale {
+	background-color: pink;
+}
+
+*/
+
+ul#list {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+}
+#controls {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+}
+#controls button {
+	-webkit-box-flex: 0;
+	-ms-flex: 0 0 auto;
+	-webkit-flex: 0 0 auto;
+	flex: 0 0 auto;
+}
+.extent {
+	-webkit-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+}
+.extent figure {
+	/*just use defaults*/
+	/*-webkit-box-flex: 1;*/
+	/* OLD - iOS 6-, Safari 3.1-6 */
+	/*-moz-box-flex: 1;*/
+	/* OLD - Firefox 19- */
+	/* For old syntax, otherwise collapses. */
+	/*-webkit-flex: 1;*/
+	/* Chrome */
+	/*-ms-flex: 1;*/
+	/* IE 10 */
+	/*flex: 1;*/
+	-webkit-box-flex: 1 1 48%;
+	-moz-box-flex: 1 1 48%;
+	webkit-flex: 1 1 48%;
+	ms-flex: 1 1 48%;
+	-webkit-box-flex: 1;
+	-webkit-flex: 1 1 48%;
+	-ms-flex: 1 1 48%;
+	flex: 1 1 48%;
+	/* longhand
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    -ms-flex-negative: 1;
+    flex-shrink: 1;
+    -ms-flex-preferred-size: 44%;
+    flex-basis: 44%;
+    border: solid 1px red;
+    */
+}
+.five figure {
+	-webkit-box-flex: 1 1 30%;
+	-moz-box-flex: 1 1 30%;
+	webkit-flex: 1 1 30%;
+	ms-flex: 1 1 30%;
+	-webkit-box-flex: 1;
+	-webkit-flex: 1 1 30%;
+	-ms-flex: 1 1 30%;
+	flex: 1 1 30%;
+}
+/*supports*/
+
+/*@supports (display: grid){ }*/
+
+/* false positive (-moz-column-gap: 20px) (-webkit-column-gap: 20px) or */
+
+@supports(column-gap: 20px) {
+	ul#thumbnails.gallery {
+		padding: .6em;
+		display: -ms-grid;
+		display: grid;
+		-ms-grid-columns: 1fr .6em 1fr .6em 1fr .6em 1fr;
+		grid-template-columns: repeat(4, 1fr);
+		grid-gap: .6em;
+	}
+	main ul#thumbnails.gallery li {
+		margin: 0px;
+		width: auto;
+		border-width: 0;
+	}
+}
+@media only screen and (max-width: 767px) {
+	@supports(column-gap: 20px) {
+		ul#thumbnails.gallery {
+			-ms-grid-columns: (1fr)[4];
+			grid-template-columns: repeat(4, 1fr);
+		}
+	}
+	header h2 {
+		z-index: 1;
+	}
+}
+@media only screen and (max-width: 667px) {
+	@supports ((display: -webkit-flex) or (display: -moz-flex) or (display: flex)) {
+		.extent {
+			display: -webkit-box;
+			/* OLD - iOS 6-, Safari 3.1-6 */
+			/* OLD - Firefox 19- (buggy but mostly works) */
+			display: -ms-flexbox;
+			/* TWEENER - IE 10 */
+			display: -webkit-flex;
+			/* NEW - Chrome */
+			display: flex;
+			/* NEW, Spec - Opera 12.1, Firefox 20+ */
+		}
+		#sell table {
+			/*table-layout: fixed;*/
+		}
+		div#sell>a {
+			/*https://stackoverflow.com/questions/33502702/flex-elements-ignore-percent-padding-in-firefox*/
+			padding: .825em;
+		}
+		.extent>a {
+			/*https://stackoverflow.com/questions/33502702/flex-elements-ignore-percent-padding-in-firefox*/
+			padding: 0em;
+		}
+		#sell.tog {
+			padding: 3%;
+		}
+		#sell.tog a {
+			margin: 0%;
+		}
+	}
+	@supports(column-gap: 20px) {
+		/*reset to override inline-block scenario*/
+		#sell figure {
+			width: auto;
+		}
+		.intro .extent {
+			display: -ms-grid;
+			display: grid;
+			-ms-grid-columns: 1fr .5em 1fr;
+			grid-template-columns: repeat(2, 1fr);
+			grid-auto-rows: auto;
+			grid-gap: .5em;
+			margin: 0;
+		}
+		.five .extent {
+			-ms-grid-columns: (1fr)[12];
+			grid-template-columns: repeat(12, 1fr);
+			-ms-grid-rows: (1fr)[3];
+			grid-template-rows: repeat(3, 1fr)
+		}
+		.five .extent>*:nth-child(1) {
+			-ms-grid-row: 1;
+			-ms-grid-column: 1
+		}
+		.five .extent>*:nth-child(2) {
+			-ms-grid-row: 1;
+			-ms-grid-column: 2
+		}
+		.five .extent>*:nth-child(3) {
+			-ms-grid-row: 1;
+			-ms-grid-column: 3
+		}
+		.five .extent>*:nth-child(4) {
+			-ms-grid-row: 1;
+			-ms-grid-column: 4
+		}
+		.five .extent>*:nth-child(5) {
+			-ms-grid-row: 1;
+			-ms-grid-column: 5
+		}
+		.five .extent>*:nth-child(6) {
+			-ms-grid-row: 1;
+			-ms-grid-column: 6
+		}
+		.five .extent>*:nth-child(7) {
+			-ms-grid-row: 1;
+			-ms-grid-column: 7
+		}
+		.five .extent>*:nth-child(8) {
+			-ms-grid-row: 1;
+			-ms-grid-column: 8
+		}
+		.five .extent>*:nth-child(9) {
+			-ms-grid-row: 1;
+			-ms-grid-column: 9
+		}
+		.five .extent>*:nth-child(10) {
+			-ms-grid-row: 1;
+			-ms-grid-column: 10
+		}
+		.five .extent>*:nth-child(11) {
+			-ms-grid-row: 1;
+			-ms-grid-column: 11
+		}
+		.five .extent>*:nth-child(12) {
+			-ms-grid-row: 1;
+			-ms-grid-column: 12
+		}
+		.five .extent>*:nth-child(13) {
+			-ms-grid-row: 2;
+			-ms-grid-column: 1
+		}
+		.five .extent>*:nth-child(14) {
+			-ms-grid-row: 2;
+			-ms-grid-column: 2
+		}
+		.five .extent>*:nth-child(15) {
+			-ms-grid-row: 2;
+			-ms-grid-column: 3
+		}
+		.five .extent>*:nth-child(16) {
+			-ms-grid-row: 2;
+			-ms-grid-column: 4
+		}
+		.five .extent>*:nth-child(17) {
+			-ms-grid-row: 2;
+			-ms-grid-column: 5
+		}
+		.five .extent>*:nth-child(18) {
+			-ms-grid-row: 2;
+			-ms-grid-column: 6
+		}
+		.five .extent>*:nth-child(19) {
+			-ms-grid-row: 2;
+			-ms-grid-column: 7
+		}
+		.five .extent>*:nth-child(20) {
+			-ms-grid-row: 2;
+			-ms-grid-column: 8
+		}
+		.five .extent>*:nth-child(21) {
+			-ms-grid-row: 2;
+			-ms-grid-column: 9
+		}
+		.five .extent>*:nth-child(22) {
+			-ms-grid-row: 2;
+			-ms-grid-column: 10
+		}
+		.five .extent>*:nth-child(23) {
+			-ms-grid-row: 2;
+			-ms-grid-column: 11
+		}
+		.five .extent>*:nth-child(24) {
+			-ms-grid-row: 2;
+			-ms-grid-column: 12
+		}
+		.five .extent>*:nth-child(25) {
+			-ms-grid-row: 3;
+			-ms-grid-column: 1
+		}
+		.five .extent>*:nth-child(26) {
+			-ms-grid-row: 3;
+			-ms-grid-column: 2
+		}
+		.five .extent>*:nth-child(27) {
+			-ms-grid-row: 3;
+			-ms-grid-column: 3
+		}
+		.five .extent>*:nth-child(28) {
+			-ms-grid-row: 3;
+			-ms-grid-column: 4
+		}
+		.five .extent>*:nth-child(29) {
+			-ms-grid-row: 3;
+			-ms-grid-column: 5
+		}
+		.five .extent>*:nth-child(30) {
+			-ms-grid-row: 3;
+			-ms-grid-column: 6
+		}
+		.five .extent>*:nth-child(31) {
+			-ms-grid-row: 3;
+			-ms-grid-column: 7
+		}
+		.five .extent>*:nth-child(32) {
+			-ms-grid-row: 3;
+			-ms-grid-column: 8
+		}
+		.five .extent>*:nth-child(33) {
+			-ms-grid-row: 3;
+			-ms-grid-column: 9
+		}
+		.five .extent>*:nth-child(34) {
+			-ms-grid-row: 3;
+			-ms-grid-column: 10
+		}
+		.five .extent>*:nth-child(35) {
+			-ms-grid-row: 3;
+			-ms-grid-column: 11
+		}
+		.five .extent>*:nth-child(36) {
+			-ms-grid-row: 3;
+			-ms-grid-column: 12
+		}
+		.five .extent figure:nth-child(even) {
+			-ms-grid-column: 1;
+			-ms-grid-column-span: 6;
+			grid-column: 1 / 7;
+		}
+		.five .extent figure:nth-child(odd) {
+			-ms-grid-column: 7;
+			-ms-grid-column-span: 6;
+			grid-column: 7 / 13;
+		}
+		.five .extent figure:last-child {
+			-ms-grid-column: 4;
+			-ms-grid-column-span: 6;
+			grid-column: 4 / 10;
+		}
+		.extent figure {
+			margin: 0;
+		}
+		.six .extent {
+			display: -ms-grid;
+			display: grid;
+			-ms-grid-columns: 1fr .5em 1fr .5em 1fr;
+			grid-template-columns: repeat(3, 1fr);
+			grid-auto-rows: auto;
+			grid-gap: .5em;
+			margin: 0;
+		}
+	}
+	/*grid*/
+}
+/*667*/
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: portrait) {
+	@supports(column-gap: 20px) {
+		ul#thumbnails.gallery li {
+			width: auto;
+			margin: 0px;
+		}
+	}
+}
+@media only screen and (min-width: 768px) {
+	@supports(column-gap: 20px) {
+		header {
+			display: block;
+			padding: 0;
+		}
+		header>a:link {
+			position: relative;
+			width: 100%;
+		}
+		header h2 {
+			grid-column: 11 / 36;
+			grid-row: 8 / 10;
+			margin: 0;
+		}
+		a#yag {
+			grid-column: 30 / 36;
+			grid-row: 1 / 7;
+			position: relative;
+			width: 100%;
+			margin: 0;
+		}
+		a#ga_logo {
+			grid-column: 1 / 11;
+			grid-row: 1 / 8;
+			margin: 0;
+		}
+	}
+}

@@ -1,0 +1,79 @@
+@media screen and (min-width: 769px) {
+    
+    #about_us #innerwrap main aside {
+		position: static;
+		z-index: -1
+	}
+	#about_us #innerwrap main aside {
+		position: absolute;
+	}
+
+	#about_us .read-more-target > * {
+		margin-right: 33%;
+	}
+
+	#about_alpacas main .read-more-target > * {
+		margin-right: 44%;
+	}
+
+	#stud_services footer, #contact_us footer, #links footer, #about_alpacas footer, #about_us footer {
+		margin-top: 3%;
+	}
+	#alpacas_for_sale main aside {
+		max-width: 50em;
+	}
+	#alpacas_for_sale main aside {
+		position: relative;
+		bottom: 0%;
+		margin: 0;
+	}
+	#alpacas_for_sale main divaside {
+		width: 130%;
+	}
+	#alpacas_for_sale #innerwrap {
+		margin-top: 0%;
+	}
+	#alpacas_for_sale footer {
+		margin-top: 0%;
+	}
+    #stud_services main article.intro p {
+		margin-right: 70%;
+	}
+	
+	/* none being a valid value for mask */
+	@supports not (mask: none) {
+        #welcome aside img {
+		-webkit-mask: url('../images/carlos_masking.png') top left / cover;
+		mask: url('../images/carlos_masking.png') top left / cover;
+	}
+	#about_alpacas aside img {
+		-webkit-mask: url('../images/about_alpacas_masking.png') -1px 0px / cover;
+		mask: url('../images/about_alpacas_masking.png') -1px 0px / cover;
+	}
+        #upkeep aside img {
+		-webkit-mask: url('../images/upkeep_masking.png') -1px 0px / cover;
+		mask: url('../images/upkeep_masking.png') -1px 0px / cover;
+	}
+	#stud_services aside img:first-child {
+		-webkit-mask: url('../images/stud_masking.png') -1px 0px / cover;
+		mask: url('../images/stud_masking.png') -1px 0px / cover;
+	}
+	
+	#links aside img {
+		-webkit-mask: url('../images/links_masking.png') -1px 0px / cover;
+		mask: url('../images/links_masking.png') -1px 0px / cover;
+	}
+	#contact_us aside img {
+		-webkit-mask: url('../images/contacts_masking.png') -1px 0px / cover;
+		mask: url('../images/contacts_masking.png') -1px 0px / cover;
+	}        
+    
+	.cssmask #about_us aside img {
+		-webkit-mask: url('../images/honcho_masking.png') -1px 0px / cover;
+		mask: url('../images/honcho_masking.png') -1px 0px / cover;
+	}
+	.cssmask #about_us #wrap main aside {
+		z-index: 0;
+	}
+	
+}

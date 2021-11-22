@@ -1,0 +1,401 @@
+/*https://www.paulirish.com/2008/the-two-css-selector-bugs-in-ie6/*/
+
+* {
+	margin: 0;
+	padding: 0;
+}
+table {
+	width: 46.5%;
+	min-width: 18em;
+	margin-right: 2.5%;
+	float: left;
+}
+table table {
+	margin-right: 0%;
+	width: 100%;
+}
+.extent {
+	left: 0;
+	margin: 0 auto;
+	height: 1%;
+	*padding: .6em .3em;
+	*padding: 2% 1%;
+	*height: 1%;
+}
+.extent a {
+	padding: 0;
+}
+.extent figure {
+	display: inline;
+	display: inline-block;
+	margin: .3em 1%;
+	padding: 0;
+	vertical-align: bottom;
+	box-sizing: border-box;
+	width: 23%;
+	*width: 22.6%;
+	_width: 22%;
+}
+.five figure {
+	width: 18%;
+	*width: 17.6%;
+	_width: 17.1%;
+}
+.six figure {
+	width: 14.6%;
+	*width: 14.3%;
+	_width: 13.7%;
+}
+.extent figure > * {
+	border: 1em solid white;
+}
+
+.extent figcaption {
+    _border: 4px solid white;
+}
+
+.six figcaption {
+	border-width: .5em 4px 1em;
+}
+
+.five figcaption {
+	border-width: .5em 0 1em;
+}
+
+.four figcaption {
+	border-width: .5em 0 1em;
+}
+
+article.intro {
+	*height: 1%;
+}
+.tab {
+	transform: translateX(-1000px);
+	-webkit-transition: left 1s;
+	-o-transition: left 1s;
+	transition: all 1s;
+}
+.loop, .tab {
+	transform: translateX(0px);
+}
+.tab li {
+	margin-right: .1em;
+}
+.tab a {
+	padding: 0.7em 1.3em;
+}
+.extent figure a {
+	border-width: 0 .8em;
+	padding: 1em 0 0;
+}
+
+#sell.extent figure a {
+	_padding: 1em 0 0;
+}
+.extent figure img {
+	width: 100%;
+}
+
+.loop a::after, .loop a::before {
+	/*border arrows */
+	display: block;
+	position: absolute;
+	top: 50%;
+	left: 100%;
+	z-index: 1;
+	width: 0;
+	height: 0;
+	margin-top: -2em;
+}
+/*https://stackoverflow.com/questions/13501061/css-table-cell-size-issues*/
+
+.sell .tog a {
+	margin-left: 0;
+}
+#sell, #sell > a, ul#thumbnails, ul#list {
+	overflow: hidden;
+}
+
+#sell > a {
+	padding: 1.6%;
+	*height: 1%;
+    border: 1px solid #809933;
+    border: 1px solid hsla(75, 50%, 40%, 1);
+}
+
+#sell a {
+	display: block;
+    _padding: 1.6%;
+    *height: 1%;
+    overflow: hidden;
+}
+#sell.extent a {
+    overflow: visible;
+}
+#list li, #list li a {
+	float: left;
+	zoom: 1;
+}
+#alpacas_for_sale main aside {
+	width: 100%;
+	z-index: -1;
+	display: block;
+}
+#alpacas_for_sale main>aside {
+	width: 72%;
+}
+#alpacas_for_sale header {
+	z-index: 0;
+	margin-bottom: 1em;
+}
+
+/* early ie requires ul#list, ul#list li to pull content above #sell div */
+#controls, #alpacas_for_sale aside, ul#list, ul#thumbnails, #gallery main, ul#list li {
+	position: relative;
+}
+#alpacas_for_sale main aside {
+	position: absolute;
+	bottom: 12%;
+	right: 0%;
+	margin: 0;
+	z-index: 1;
+}
+#alpacas_for_sale aside img {
+	float: none;
+}
+.sell #sell {
+	padding: 2%;
+	height: 1%;
+	/* ie prefers this to margin-bottom -1px on ul#list */
+	margin-top: -1px;
+	*clear: left;
+}
+
+.sell #sell.extent{
+	margin-top: 0;
+    padding: 1%;
+}
+
+.loop+#sell {
+	margin-top: 0;
+}
+
+#alpacas_for_sale article.intro {
+	position: relative;
+	width: 100%;
+}
+.touch, .sell aside, table, .tog table.show, .extent table.show, #sell a {
+	position: absolute;
+	left: -9999px;
+}
+table.show, #sell a.show, #sell.extent a {
+	position: static;
+	left: 0px;
+}
+/*clear float in a situaton where javascript is disabled and tables are hardcoded into html*/
+
+.no-js div#sell a {
+	margin: 0 0 2% 2%;
+}
+/*
+html.js #sell a, html.js table {
+	*display: none;
+}
+html.js #sell a.show, html.js .extent a, html.js table.show {
+	*display: block;
+}
+*/
+.no-js div#sell a:last-child {
+	margin: 0 0 0% 2%;
+}
+/* end of sale */
+
+/* G A L L E R Y */
+
+body {}
+#gallery footer {
+	padding: 0%;
+	margin-top: 4%;
+	border-width: 0px;
+}
+#gallery #yag img {
+	color: red;
+}
+#gallery #yag>img {
+	color: white;
+}
+ul#thumbnails {
+	margin: 4% auto 0;
+	/*clear
+   transform: scale(.95);*/
+	font-size: 1.03em;
+	font-size: 0.9375em;
+	padding: 4px;
+    width: 89.7%;
+    *width: 91%;
+	/*https://stackoverflow.com/questions/1823551/what-is-this-ie-css-bug-called-double-vertical-padding*/
+    transition: width 1s ease-in-out;
+}
+#gallery footer ul>* {
+	-webkit-transition: all 1s;
+	-o-transition: all 1s;
+	transition: all 1s;
+	opacity: 1;
+}
+ul#thumbnails li {
+	float: left;
+	width: 100%;
+}
+ul#thumbnails li a {
+	display: block;
+}
+#gallery.showtime footer {
+	margin-top: 0%;
+}
+.showtime ul#thumbnails {
+	margin: 3% auto 0;
+}
+ul#thumbnails.portrait {
+	width: 60%;
+}
+ul#thumbnails.gallery {
+	padding: 4px;
+}
+ul#thumbnails.gallery li {
+	border: solid 4px white;
+	width: 8.06em;
+}
+ul#thumbnails li.go {
+	visibility: hidden;
+}
+/* base INITIAL settings on 800px screen @screen use %*/
+
+ul#thumbnails.gallery li.portrait {
+	float: right;
+	width: 4.259em;
+	clear: right;
+	*width: 5.3em;
+}
+ul#thumbnails.gallery li.portrait {
+	width: 78px;
+	width: 6em;
+}
+ul#thumbnails li, .playing li#paused, .swap #base {
+	position: absolute;
+	left: -9999px;
+	opacity: 0;
+}
+.inplay #paused, ul li#base, ul#thumbnails.gallery li, ul#thumbnails li.show, ul#thumbnails li#slide {
+	position: relative;
+	left: 0;
+	opacity: 1;
+	filter: alpha(opacity=100);
+	/* IE8 and lower */
+	zoom: 1;
+	/* Triggers "hasLayout" in IE 7 and lower */
+	*display: inline;
+}
+/* G A L L E R Y | S H O W T I M E */
+
+#controls {
+	font-size: 1.8em;
+	margin: 0 auto;
+	-webkit-transition: all 1s;
+	-o-transition: all 1s;
+	transition: all 1s;
+	top: 0em;
+	z-index: 2;
+	opacity: 0;
+	display: table;
+	border-spacing: .5em;
+}
+#controls, #controls button {
+	display: inline;
+	display: inline-block;
+	zoom: 1;
+}
+#controls button {
+	width: 1.5em;
+	height: 1.5em;
+	padding: 0;
+	margin: 0 .3em;
+	display: table-cell;
+}
+button#exit {
+	margin: 0.33em;
+}
+#gallery main {
+	padding: 0;
+	text-align: center;
+}
+li#slide, li#paused {
+	margin-left: -100%;
+}
+.swap #slide {
+	margin-left: 0;
+}
+#controls.static {
+	top: -3em;
+	opacity: 1;
+}
+.js #exit {
+	width: 36px;
+	height: 36px;
+	left: calc(100% - 36px);
+	margin: 1em 0 0;
+	display: block;
+	position: relative;
+	line-height: 1;
+	border: 0px;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-image: url(../assets/close_transparent.png);
+	background-color: #7F9933;
+	-webkit-transition: all 1s;
+	-o-transition: all 1s;
+	transition: all 1s;
+    box-sizing: border-box;
+}
+
+.no-objectfit #exit{
+    left: 94%;
+    /* ie < 8 text-align center trumps left*/
+    *left: 47%;
+}
+/*.touchevents replaces media queries (hover: hover) || (pointer: fine) where support is doubtful
+logic dictates that we only get to this point courtesy of javascript so modernizr supplies the className .(no-)touchevents */
+
+.js #exit:hover, .js #exit:focus {
+	background-position: 50% 106%;
+}
+.touchevents .inplay #controls {
+	top: 2.4em;
+	opacity: 1;
+}
+.touchevents #gallery.showtime footer {
+	margin-top: -5em;
+}
+.touchevents #wrap.inplay footer ul>* {
+	opacity: 0;
+}
+.no-touchevents button#forwardbutton:hover {
+	background-position: 50% 56%;
+}
+.no-touchevents button#backbutton:hover {
+	background-position: 50% 70.5%;
+}
+.no-touchevents button#playbutton:hover {
+	background-position: 50% 85%;
+}
+.no-touchevents .playing button#playbutton:hover {
+	background-position: 50% 100%;
+}
+.touchevents #gallery.showtime #innerwrap {
+	padding-bottom: 6em;
+}
+@media only screen {
+	#exit:hover, #exit:focus {
+		-webkit-transform: rotate(360deg);
+		transform: rotate(360deg);
+	}
+}

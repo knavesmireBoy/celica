@@ -1,0 +1,218 @@
+/*html.js devicemotion deviceorientation svg svgasimg inlinesvg svgfilters svgasimg opacity classlist nthchild requestanimationframe raf no-touchevents cssanimations backgroundsize no-cssgridlegacy no-cssgrid flexbox flexboxlegacy no-flexboxtweener flexwrap no-cssmask rgba hsla ellipsis cssgradients bgpositionshorthand boxshadow textshadow cssvhunit cssvmaxunit cssvminunit borderradius cssvwunit csscalc objectfit object-fit {
+}
+*/
+
+body {
+	margin: 2em;
+	/*display: flex;
+	flex-direction: column;
+	 https://github.com/philipwalton/solved-by-flexbox/blob/master/assets/css/components/site.css */
+}
+
+header {
+	padding-top: 17em;
+}
+
+nav {
+	width: 23%;
+	min-width: 18%;
+	z-index: 2;
+	margin-left: 1.5em;
+	float: left;
+}
+
+main {
+	padding: .8em 0 0;
+	width: 71%;
+	float: right;
+}
+
+/*https://css-tricks.com/all-about-floats/*/
+
+footer {
+	padding-top: 15%;
+	clear: both;
+	z-index: 1;
+}
+
+header, aside img {
+	position: relative;
+    width: 100%;
+}
+main aside {
+	margin: 0;
+	position: absolute;
+	z-index: 0;
+	/* z-index required IF persisting with masking, explore clipping */
+	/* https://philipwalton.com/articles/what-no-one-told-you-about-z-index/ */
+}
+
+/*ie 7*/
+nav li /*,nav ul */ {
+	overflow: hidden;
+}
+
+header h1 {
+	margin:0;
+    width: 100%;
+}
+header h2 {
+	/* fix IF supporting screen sizes below width of 800px */
+	margin-left: 28%;
+}
+header a:link, header a:visited {
+	position: absolute;
+	width: 29%;
+	top: 0px;
+	left: 0px;
+}
+footer ul {
+	padding: 22% 5% 3.5% 0;
+	padding: 3% 5% 3% 0;
+	line-height: 1.2;
+	line-height: 1;
+}
+footer li {
+	display: inline-block;
+	display: inline;
+	zoom: 1;
+	margin-left: .25em;
+}
+/* fix for ie at small screens */
+nav div {
+	*display: inline-block;
+	*display: inline;
+	*zoom: 1;
+	*min-width: 166px;
+}
+/* set img color to red */
+
+aside img {
+	float: right;
+    display: block;
+	color: red;
+}
+/* reset img color to white for ie > 6*/
+
+aside>img {
+	color: white;
+}
+/* target ie 7 separately*/
+
+*+html aside img {
+	color: blue;
+}
+
+header a h1 {
+	white-space: nowrap;
+	width: 100%;
+	text-indent: -999px;
+}
+
+header a h1 img {
+	margin: 0;
+    position: relative;
+}
+
+nav a, nav a:link, nav a:visited {
+	padding: 0 0 0 2.5em;
+}
+
+.read-more-target {
+    margin-top: .7em;
+}
+.no-cssgradients hr {
+	display: none;
+}
+
+.verbose article p {
+    margin: .5em 35% .5em 0;
+}
+
+footer li:first-child::after {
+	content: " |";
+	margin-right: -.25em;
+}
+
+.verbose article.intro p {
+    margin: 0 35% .5em 0;
+}
+
+.no-cssmask main aside {
+	/*hide while js masking kicks in ONLY for browswers that don't support masking*/
+	z-index: -1;
+	display: none;
+}
+
+/* https://stopdesign.com/eg/ie5mac-bpf */
+
+/* Start Mac IE5 filter \*/
+
+main p, main label.read-more-trigger {
+	z-index: 2;
+}
+main>aside {
+	width: 76%;
+	right: -23%;
+	bottom: 3%;
+}
+/*??*/
+nav, main, aside img {
+	*display: inline;
+}
+
+/*
+#innerwrap  {
+    display: flex;
+    flex-flow: row-reverse;
+}
+
+#innerwrap  nav{
+flex: 3 0 1%;
+margin-right: 6%;
+}
+#innerwrap  main{
+flex: 10 0 1%;
+}
+
+@media only screen and (max-width: 768px) {
+
+}
+*/
+
+/* End Mac IE5 filter */
+
+/*https://www.sitepoint.com/community/t/how-to-detect-whether-css-enabled-or-not-using-javascript/4597/5*/
+#checkDummy {
+	margin-top: 1px;
+	display: none;
+}
+#wrap {
+	margin: 0 auto;
+}
+footer, main p, main label.read-more-trigger, #wrap {
+	position: relative;
+}
+
+header, footer, nav li, nav a, #wrap, #innerwrap {
+	width: 100%;
+}
+#wrap, article.intro {
+	overflow: hidden;
+}
+footer, main aside,  header a, main label, main input, main .read-more-target, #innerwrap {
+	overflow: hidden;
+}
+
+#innerwrap input {
+	cursor: pointer;
+	position: absolute;
+	left: -9999px;
+}
+
+a#yag {
+	top: 0;
+	left: auto;
+	width: 16.6%;
+	right: -1em;
+}

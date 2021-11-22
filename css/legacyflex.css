@@ -1,0 +1,35 @@
+
+.flexboxlegacy #alpacas_for_sale .extent {
+	display: -webkit-box;
+	/* OLD - iOS 6-, Safari 3.1-6 */
+	display: -moz-box;
+	/* OLD - Firefox 19- (buggy but mostly works) */
+	display: -ms-flexbox;
+	/* TWEENER - IE 10 */
+	display: -webkit-flex;
+	/* NEW - Chrome */
+	display: flex;
+	/* NEW, Spec - Opera 12.1, Firefox 20+ */
+	-webkit-box-align: start;
+	-ms-flex-align: start;
+	align-items: flex-start;
+}
+.flexboxlegacy #alpacas_for_sale figure {
+	-webkit-box-flex: 1;
+	/* OLD - iOS 6-, Safari 3.1-6 */
+	-moz-box-flex: 1;
+	/* OLD - Firefox 19- */
+	/* For old syntax, otherwise collapses. */
+	-webkit-flex: 1;
+	/* Chrome */
+	-ms-flex: 1;
+	/* IE 10 */
+	flex: 1;
+	-ms-flex-positive: 1;
+	flex-grow: 1;
+	-ms-flex-negative: 1;
+	flex-shrink: 1;
+	-ms-flex-preferred-size: 10%;
+	-webkit-flex-basis: 10%;
+	flex-basis: 10%;
+}
