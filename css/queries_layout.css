@@ -192,6 +192,9 @@
         padding: 2em 5% 0;
         margin: 0;
     }
+    .showtime nav {
+        padding: .75em 5% 0;
+    }
 	aside img {
 		float: none;
 	}

@@ -128,10 +128,18 @@ Note: This media feature is also implemented by Webkit as -webkit-device-pixel-r
         border-width: .5em 0 1em;
     }
 
-
 }
 
 @media only screen and (max-width: 667px) {
+    body {
+        background-color:dodgerblue;
+    }
+    #thumbnails {
+        background-color: white;
+    }
+    nav {
+        font-weight: bold;
+    }
 	ul.loop li a {
 		font-size: 1em;
 		padding: 1em .5em 1em 2em;
@@ -146,7 +154,7 @@ Note: This media feature is also implemented by Webkit as -webkit-device-pixel-r
 		text-align: center;
 	}
 	.touchevents .inplay #controls {
-		top: 1.1em;
+		top: .3em;
 	}
 	#sell a.show, #sell.tog table.show {
 		position: absolute;
@@ -181,7 +189,7 @@ Note: This media feature is also implemented by Webkit as -webkit-device-pixel-r
 		font-size: 1.5em;
 	}
 	.touchevents .inplay #controls {
-		top: 1em;
+		top: .3em;
 	}
 }
 @media only screen and (max-width: 375px) and (orientation: portrait) {

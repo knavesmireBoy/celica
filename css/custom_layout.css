@@ -369,7 +369,7 @@ logic dictates that we only get to this point courtesy of javascript so moderniz
 	background-position: 50% 106%;
 }
 .touchevents .inplay #controls {
-	top: 1em;
+	top: .5em;
 	opacity: 1;
 }
 .touchevents #gallery.showtime footer {
