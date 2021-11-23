@@ -6,7 +6,7 @@ header {
 	background-position: 50% 0;
 	background-repeat: no-repeat;
     background-color: mediumblue;
-    background-image: url('../images/Celica-15-008.jpeg');
+    background-image: url('../images/celica.jpg');
     background-size: 100%;
     background-position: center;
 }
@@ -36,7 +36,9 @@ nav li {
 footer ul {
 	background-color: mediumblue;
 	border-top: solid 1px mediumblue;
-	background-position: 50% 100%;
+	background-position: 50% 75%;
+    background-size: contain;
+    background-image: url(../images/footer.jpg);
 }
 footer li {
 	line-height: 2;
