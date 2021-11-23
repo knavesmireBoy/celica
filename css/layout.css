@@ -14,11 +14,16 @@ header {
 }
 
 nav {
-	width: 23%;
+	width: 26%;
 	min-width: 18%;
 	z-index: 2;
 	margin-left: 1.5em;
+    padding: 2em 0 0;
 	float: left;
+}
+
+nav p {
+    width: 100%;
 }
 
 main {
@@ -26,7 +31,6 @@ main {
 	width: 71%;
 	float: right;
 }
-
 /*https://css-tricks.com/all-about-floats/*/
 
 footer {
@@ -53,12 +57,15 @@ nav li /*,nav ul */ {
 }
 
 header h1 {
-	margin:0;
     width: 100%;
+    padding: .5em 0 0;
+    text-align: center;
+    font-size: 4em;
 }
 header h2 {
 	/* fix IF supporting screen sizes below width of 800px */
-	margin-left: 28%;
+	text-align: center;
+     padding: .5em 0;
 }
 header a:link, header a:visited {
 	position: absolute;
@@ -112,10 +119,6 @@ header a h1 {
 header a h1 img {
 	margin: 0;
     position: relative;
-}
-
-nav a, nav a:link, nav a:visited {
-	padding: 0 0 0 2.5em;
 }
 
 .read-more-target {

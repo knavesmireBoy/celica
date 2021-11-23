@@ -25,18 +25,8 @@ http://cssmediaqueries.com/overview.html*/
 	}
     */
     /* ... including this: */
-    nav a, nav a:link, nav a:visited {
-	background-repeat: no-repeat;
-	background-position: 0 -5%;
-	color: #080;
-}
-     nav a:hover {
-		background-position: 0% 47%;
-	}
+
 		
-	#innerwrap nav {
-		font: 700 1em/2.3 Verdana, sans-serif;
-	}
 	/*background size gives false positives in some browsers, using inlinesvg where support is slightly more recent*/
 	.inlinesvg #wrap footer {
 		background-size: 105%;
@@ -73,7 +63,6 @@ http://cssmediaqueries.com/overview.html*/
     }
 	nav a, nav a:link, nav a:visited {
 		background-image: none;
-		padding: 0em .8em;
 	}
 	nav ul, nav:active ul {
 		border: solid #C6C084 1px;
@@ -147,7 +136,6 @@ http://cssmediaqueries.com/overview.html*/
 	}
     /*https://css-tricks.com/override-inline-styles-with-css/*/
     #wrap header, #wrap header[style] {
-		background-image: none !important;
 	}
 }
 @media only screen and (min-width: 769px) {

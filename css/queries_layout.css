@@ -136,9 +136,7 @@
 	}
 }
 @media only screen {
-	nav {
-		margin-left: 1em;
-	}
+
 	aside {
 		-webkit-animation: alpacasBounce 3s 1 ease-out;
 		animation: alpacasBounce 3s 1 ease-out;
@@ -176,7 +174,6 @@
 	header {
 		width: 100%;
 		padding-top: 0;
-		background: none;
 		overflow: hidden;
 	}
 	header>* {
@@ -191,6 +188,10 @@
 	main, nav {
 		width: 100%;
 	}
+    nav {
+        padding: 2em 5% 0;
+        margin: 0;
+    }
 	aside img {
 		float: none;
 	}
@@ -293,6 +294,7 @@
 	.js body.sell #innerwrap main aside {
 		display: none;
 	}
+   
 	article.intro p span:nth-of-type(1), #contact_us article p:nth-of-type(1) {
 		-webkit-animation: entry .5s ease-out;
 		animation: entry .5s ease-out;

@@ -2,6 +2,8 @@ header {
 	background-position: 50% 0;
 	background-repeat: no-repeat;
     background-color: mediumblue;
+    background-image: url('../images/Celica-15-008.jpeg');
+    background-size: cover;
 }
 
 footer {
@@ -11,10 +13,6 @@ footer {
 	text-align: right;
 	background-position: 50% 0%;
 	color: white;
-}
-nav {
-	white-space: nowrap;
-	font: 700 1em/2 Verdana, sans-serif;
 }
 
 hr {
@@ -39,15 +37,11 @@ footer li {
 	line-height: 2;
 }
 nav a, nav a:link, nav a:visited {
-	background-repeat: no-repeat;
-	background-position: 0 -4%;
-	color: #080;
+	color: mediumblue;
 }
 
 nav a:hover {
-	text-decoration: none;
 	color: #6e2900;
-	background-position: 0 47%;
 }
 /*keep separate to keep early ie happy!*/
 /* ie6 requires "nav a.current:visited" */
