@@ -18,13 +18,13 @@ Note: This media feature is also implemented by Webkit as -webkit-device-pixel-r
 	}
 	.inlinesvg #controls button {
 		background-image: url(../assets/buttons_sprite.png);
-		background-color: hsla(75, 50%, 40%, .3);
+		background-color: hsla(211, 50%, 40%, .3);
 		background-size: 128%;
 	}
     @supports (background-size: cover) {
         #controls button {
 		background-image: url(../assets/buttons_sprite.png);
-		background-color: hsla(75, 50%, 40%, .3);
+		background-color: hsla(211, 50%, 40%, .3);
 		background-size: 128%;
         }
     }
