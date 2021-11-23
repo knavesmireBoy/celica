@@ -350,7 +350,7 @@ li#slide, li#paused {
 	background-repeat: no-repeat;
 	background-position: center;
 	background-image: url(../assets/close_transparent.png);
-	background-color: #7F9933;
+	background-color: mediumblue;
 	-webkit-transition: all 1s;
 	-o-transition: all 1s;
 	transition: all 1s;
@@ -369,14 +369,14 @@ logic dictates that we only get to this point courtesy of javascript so moderniz
 	background-position: 50% 106%;
 }
 .touchevents .inplay #controls {
-	top: 2.4em;
+	top: 1em;
 	opacity: 1;
 }
 .touchevents #gallery.showtime footer {
 	margin-top: -5em;
 }
 .touchevents #wrap.inplay footer ul>* {
-	opacity: 0;
+	opacity: 1;
 }
 .no-touchevents button#forwardbutton:hover {
 	background-position: 50% 56%;

@@ -61,6 +61,10 @@ header h1 {
     padding: .5em 0 0;
     text-align: center;
     font-size: 4em;
+    line-height: 1;
+    color: dodgerblue;
+    color: hsla(48, 100%, 50%, .9);
+    text-shadow: 1px 1px 1px black;
 }
 header h2 {
 	/* fix IF supporting screen sizes below width of 800px */

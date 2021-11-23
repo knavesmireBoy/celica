@@ -146,7 +146,7 @@ Note: This media feature is also implemented by Webkit as -webkit-device-pixel-r
 		text-align: center;
 	}
 	.touchevents .inplay #controls {
-		top: 2.1em;
+		top: 1.1em;
 	}
 	#sell a.show, #sell.tog table.show {
 		position: absolute;
@@ -181,7 +181,7 @@ Note: This media feature is also implemented by Webkit as -webkit-device-pixel-r
 		font-size: 1.5em;
 	}
 	.touchevents .inplay #controls {
-		top: 2.2em;
+		top: 1em;
 	}
 }
 @media only screen and (max-width: 375px) and (orientation: portrait) {

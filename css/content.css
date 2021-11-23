@@ -1,9 +1,14 @@
+body {
+	font: normal .875em/1.75 'Lora', Georgia, serif;
+	background-color: white;
+}
 header {
 	background-position: 50% 0;
 	background-repeat: no-repeat;
     background-color: mediumblue;
     background-image: url('../images/Celica-15-008.jpeg');
-    background-size: cover;
+    background-size: 100%;
+    background-position: center;
 }
 
 footer {
