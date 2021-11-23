@@ -136,6 +136,10 @@ footer li:first-child::after {
 	content: " |";
 	margin-right: -.25em;
 }
+footer li:last-child::before {
+	content: " |";
+	margin-left: -.25em;
+}
 
 .verbose article.intro p {
     margin: 0 35% .5em 0;
