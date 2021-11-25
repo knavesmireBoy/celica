@@ -191,6 +191,9 @@ Note: This media feature is also implemented by Webkit as -webkit-device-pixel-r
 	.touchevents .inplay #controls {
 		top: .3em;
 	}
+    footer {
+        background-position: center bottom;
+    }
 }
 @media only screen and (max-width: 375px) and (orientation: portrait) {
 	#list, #sell {
